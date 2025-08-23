@@ -1,4 +1,3 @@
-# LIBRARY-ZONE -1
 📚 Library Zone
 
 Library Zone is a simple web-based application to digitally manage books and library services. It provides a clean navigation menu with sections for Home, Books (Fiction, Non-Fiction, E-Books), Duration, Payment, Contact, Login, Admin, Register, and Feedback. Users can browse different book categories, check reading duration, and access payment details through iframes for smooth navigation. The project also includes a feedback form, user registration, and admin login. With dynamic menus, dropdowns, and interactive pages, Library Zone makes managing books and enhancing digital learning easy and efficient.
