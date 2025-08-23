@@ -62,6 +62,8 @@ payment.html → Payment details
 contact.html → Contact information
 
 feedback.html → Feedback submission form
+<img width="612" height="408" alt="image" src="https://github.com/user-attachments/assets/40e25fe8-ff53-445d-901c-a17da882b925" />
+
 
 📖 Managing Books
 
