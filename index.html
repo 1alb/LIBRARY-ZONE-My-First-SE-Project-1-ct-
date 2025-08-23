@@ -1,0 +1,329 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+#background {
+  background-image: url("images/4.jpg");
+  background-size: cover;       /* makes the image cover the whole div */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  min-height: 100vh;            /* ensures full height */
+}
+
+    /* Top Contact Bar */
+    #top {
+      background: #2c7ad6;
+      color: white;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    #top a {
+      text-decoration: none;
+      color: white;
+      margin-right: 15px;
+    }
+    #top .social {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Navigation */
+    #menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border-bottom: 2px solid #2c7ad6;
+      padding: 10px 20px;
+    }
+    #logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    #logo b {
+      color: #2c7ad6;
+    }
+    #menu1 ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    #menu1 ul li {
+      position: relative;
+    }
+    #menu1 ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    #menu1 ul li a:hover {
+      background: #2c7ad6;
+      color: white;
+    }
+
+    /* Dropdown */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: white;
+      top: 35px;
+      left: 0;
+      min-width: 160px;
+      border: 1px solid #ccc;
+      z-index: 100;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 8px 12px;
+      color: black;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background: #2c7ad6;
+      color: white;
+    }
+    #menu1 ul li:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      padding: 10px 20px;
+      background: #f4f4f4;
+      font-size: 14px;
+    }
+    .breadcrumb a {
+      color: #2c7ad6;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    /* Iframe Section */
+    #iframe-container {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    /* Footer Top */
+    #down {
+      background: #2c7ad6;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    #down h3, #down h2 {
+      margin: 10px 0;
+    }
+    #down a {
+      color: white;
+      text-decoration: none;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    /* Footer Bottom */
+    .footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    /* Scroll Buttons */
+    #scroll-up, #scroll-down {
+      position: fixed;
+      right: 20px;
+      padding: 10px 15px;
+      font-size: 20px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      color: white;
+      background: #2c7ad6;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+      transition: 0.3s;
+      z-index: 200;
+    }
+    #scroll-up:hover, #scroll-down:hover {
+      background: #1e5bbf;
+    }
+    #scroll-up {
+      bottom: 70px;
+    }
+    #scroll-down {
+      bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #menu1 ul {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+      #x, #y {
+        flex: none;
+        width: 100%;
+        height: auto;
+      }
+      #x {
+        padding: 40px 20px;
+      }
+    }
+    #logo {
+  text-align: center;
+  width: 100%;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+    #logo .library {
+  color: red;
+}
+
+#logo .zone {
+  color: blue;
+  font-weight: bold;
+}
+
+    
+  </style>
+</head>
+<body>
+  <div id="background">
+    
+    <!-- Top Bar -->
+    <div id="top">
+      <div>
+        <a href="#" class="fa fa-envelope"> monishagaur02042004@gmail.com</a>
+        <a href="#" class="fa fa-phone"> +91-7999350663</a>
+      </div>
+      <div class="social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+      </div>
+    </div>
+
+    <!-- Top Icon Bar -->
+<div id="top-icons" style="background:#2c7ad6; padding:8px 20px; display:flex; justify-content:flex-end; gap:20px;">
+  <a href="home.html"target="frame" class="fa fa-home" style="color:white; text-decoration:none;"> Home</a>
+
+  <a href="duration.html" target="frame" class="fa fa-money" style="color:white; text-decoration:none;"> Duration</a>
+  <a href="payment.html" target="frame" class="fa fa-credit-card" style="color:white; text-decoration:none;"> Payment</a>
+  <a href="contact.html" target="frame" class="fa fa-phone" style="color:white; text-decoration:none;"> Contact</a>
+  <a href="login.html" target="frame" class="fa fa-user" style="color:white; text-decoration:none;"> Login</a>
+  <a href="Admin.html" target="frame" class="fa fa-user" style="color:white; text-decoration:none;"> Admin Login</a>
+  <a href="Register.html" target="frame" class="fa fa-user-plus" style="color:white; text-decoration:none;"> Register</a>
+<a  href="Feedback.html" target="frame" class="fa fa-comments" style="color:white; text-decoration:none;"> Feedback</a>
+    <a href="#" class="fa fa-book" style="color:white; text-decoration:none;"> Books ▾</a>
+    <div style="display:none; position:absolute; background:white; top:30px; right:0; min-width:160px; border:1px solid #ccc; z-index:999;" class="books-dropdown">
+      <a href="fiction.html" target="frame" style="display:block; padding:8px 12px; color:black; text-decoration:none;">Fiction</a>
+      <a href="nonfiction.html" target="frame" style="display:block; padding:8px 12px; color:black; text-decoration:none;">Non-Fiction</a>
+      <a href="ebooks.html" target="frame" style="display:block; padding:8px 12px; color:black; text-decoration:none;">E-Books</a>
+    </div>
+</div>
+
+
+    <!-- Navigation / Logo -->
+<div id="logo">
+  <span style="color:red;">LIBRARY</span><b style="color:blue;">ZONE</b>
+</div>
+<!-- Welcome Message BELOW logo -->
+
+
+    <!-- Iframe Container -->
+    <iframe id="iframe-container" name="frame" src="home.html"></iframe>
+     
+  
+
+    <!-- Contact Section -->
+    <div id="down">
+      <h3>Stay Connected</h3>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-twitter"></a>
+
+      <h2>Contact Address</h2>
+      <a href="#" class="fa fa-home"> Sector-6 Vidhyadhar Nagar</a><br>
+      <a href="#" class="fa fa-phone"> +91-7999350663</a><br>
+      <a href="#" class="fa fa-envelope"> monishagaur02042004@gmail.com</a>
+    </div>
+<!-- Books Section with Logo -->
+<div id="books-section" style="text-align:center; padding:40px 20px;">
+  <img src="images/books-logo.png" alt="Books Logo" style="width:120px; height:auto; margin-bottom:15px;">
+  <h2 style="color:#096bdb; font-size:28px; font-weight:bold;">Our Book Collection</h2>
+  <p style="font-size:16px; color:#0c0404;">Explore a wide range of Fiction, Non-Fiction, and E-Books available in our library.</p>
+</div>
+
+   <div style="position:relative;"></div>
+    <a href="#" class="fa fa-book" style="color:white; text-decoration:none;"> Books ▾</a>
+    <div style="display:none; position:absolute; background:white; top:30px; right:0; min-width:160px; border:1px solid #ccc; z-index:999;" class="books-dropdown">
+      <a href="fiction.html" target="frame" style="display:block; padding:8px 12px; color:black; text-decoration:none;">Fiction</a>
+      <a href="nonfiction.html" target="frame" style="display:block; padding:8px 12px; color:black; text-decoration:none;">Non-Fiction</a>
+      <a href="ebooks.html" target="frame" style="display:block; padding:8px 12px; color:black; text-decoration:none;">E-Books</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Footer -->
+    <div class="footer">Developed By : Monisha Gaur</div>
+
+    <!-- Scroll Buttons -->
+    <button id="scroll-up"><i class="fa fa-arrow-up"></i></button>
+    <button id="scroll-down"><i class="fa fa-arrow-down"></i></button>
+
+  </div>
+
+  <script>
+    // Books dropdown toggle
+const booksMenu = document.querySelector("#top-icons .fa-book");
+const booksDropdown = document.querySelector(".books-dropdown");
+
+booksMenu.addEventListener("mouseover", () => booksDropdown.style.display = "block");
+booksMenu.addEventListener("mouseout", () => booksDropdown.style.display = "none");
+booksDropdown.addEventListener("mouseover", () => booksDropdown.style.display = "block");
+booksDropdown.addEventListener("mouseout", () => booksDropdown.style.display = "none");
+
+    document.getElementById("scroll-up").onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+    document.getElementById("scroll-down").onclick = () => window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+  </script>
+
+</body>
+</html>
+
+
+
+

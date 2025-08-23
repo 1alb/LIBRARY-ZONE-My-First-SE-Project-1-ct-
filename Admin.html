@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Library Zone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px;
+      width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .login-box h2 {
+      color: #2c7ad6;
+      margin-bottom: 20px;
+    }
+
+    .login-box .input-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .login-box label {
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .login-box input:focus {
+      border-color: #2c7ad6;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background: #2c7ad6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background: #1e5cab;
+    }
+
+    .login-box a {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #2c7ad6;
+      text-decoration: none;
+    }
+
+    .login-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="login-box">
+      <h2><i class="fa fa-user"></i> Admin Login</h2>
+      <form>
+        <div class="input-group">
+          <label for="username"><i class="fa fa-user"></i> Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+        <div class="input-group">
+          <label for="password"><i class="fa fa-lock"></i> Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit">Login</button>
+        <a href="#">Forgot Password?</a>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

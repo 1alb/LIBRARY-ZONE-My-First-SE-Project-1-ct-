@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Books</title>
+</head>
+<body style="padding:20px; font-family:Arial;">
+  <h2>Books Section</h2>
+  <div id="bookContent"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+    const bookDiv = document.getElementById("bookContent");
+
+    if (type) {
+      bookDiv.innerHTML = "<h3>" + type.toUpperCase() + " Books</h3><p>List of " + type + " books available...</p>";
+    } else {
+      bookDiv.innerHTML = "<p>Please select a book category.</p>";
+    }
+  </script>
+</body>
+</html>

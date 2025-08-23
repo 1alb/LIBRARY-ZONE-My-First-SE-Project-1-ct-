@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Library Zone</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+    h2 {
+      text-align: center;
+      color: #2c7ad6;
+      margin-bottom: 20px;
+    }
+    .contact-container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    }
+    .contact-info {
+      margin-bottom: 20px;
+    }
+    .contact-info p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+    .contact-info i {
+      color: #2c7ad6;
+      margin-right: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      background: #2c7ad6;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #1e5bbf;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📞 Contact Us</h2>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <p><i class="fa fa-home"></i> Sector-6, Vidhyadhar Nagar, Jaipur</p>
+      <p><i class="fa fa-phone"></i> +91-7999350663</p>
+      <p><i class="fa fa-envelope"></i> monishagaur02042004@gmail.com</p>
+    </div>
+
+    <form onsubmit="alert('Thank you! We will get back to you soon.'); return false;">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</body>
+</html>
