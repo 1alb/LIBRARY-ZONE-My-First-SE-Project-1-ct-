@@ -2,6 +2,7 @@
 
 Library Zone is a simple web-based application to digitally manage books and library services. It provides a clean navigation menu with sections for Home, Books (Fiction, Non-Fiction, E-Books), Duration, Payment, Contact, Login, Admin, Register, and Feedback. Users can browse different book categories, check reading duration, and access payment details through iframes for smooth navigation. The project also includes a feedback form, user registration, and admin login. With dynamic menus, dropdowns, and interactive pages, Library Zone makes managing books and enhancing digital learning easy and efficient.
 Library Zone is a simple web-based library management system that allows users to explore books, manage registrations, make payments, and provide feedback. It is built using HTML, CSS, JavaScript, and iframes to load different sections dynamically.
+<img width="216" height="148" alt="image" src="https://github.com/user-attachments/assets/b2ab4dc5-e980-4de2-be2a-d8fb3e51510e" />
 
 🚀 Features
 
