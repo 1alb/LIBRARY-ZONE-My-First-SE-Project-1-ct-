@@ -86,6 +86,8 @@ Adding localStorage / database to store books and users.
 Adding an admin panel to manage book records (add, update, delete).
 
 Integrating payment gateway APIs for real transactions.
+<img width="174" height="148" alt="image" src="https://github.com/user-attachments/assets/c52b9fce-0c6f-45c6-bc66-57cd510a4e59" />
+
 
 ▶️ How to Run
 
