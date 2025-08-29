@@ -222,6 +222,20 @@
   </style>
 </head>
 <body>
+  <input type="text" id="search" placeholder="Search books..." onkeyup="searchBooks()">
+
+
+<script>
+function searchBooks() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let items = document.querySelectorAll("#bookList li");
+  
+  items.forEach(book => {
+    book.style.display = book.textContent.toLowerCase().includes(input) ? "" : "none";
+  });
+}
+</script>
+
   <div id="background">
     
     <!-- Top Bar -->
@@ -306,6 +320,9 @@
     <button id="scroll-down"><i class="fa fa-arrow-down"></i></button>
 
   </div>
+  <input type="text" id="search" placeholder="Search books..." onkeyup="searchBooks()">
+
+
 
   <script>
     // Books dropdown toggle
@@ -320,6 +337,31 @@ booksDropdown.addEventListener("mouseout", () => booksDropdown.style.display = "
     document.getElementById("scroll-up").onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
     document.getElementById("scroll-down").onclick = () => window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
   </script>
+  <script>
+function searchBooks() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let dropdown = document.getElementById("dropdown");
+  let items = dropdown.getElementsByTagName("p");
+  let found = false;
+
+  for (let i = 0; i < items.length; i++) {
+    let book = items[i].textContent.toLowerCase();
+    if (book.includes(input) && input !== "") {
+      items[i].style.display = "block";
+      found = true;
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+
+  dropdown.style.display = found ? "block" : "none";
+}
+
+function selectBook(element) {
+  document.getElementById("search").value = element.textContent;
+  document.getElementById("dropdown").style.display = "none";
+}
+</script>
 
 </body>
 </html>
